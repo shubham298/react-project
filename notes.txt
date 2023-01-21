@@ -38,3 +38,48 @@ html parsing =  ------
 
 -> Used when relative order of execution is important
 -> It is used to load dependent script
+
+
+
+--------------------Session 2-----------------------------
+PRODUCTION READYINESS - We need to buldling , minification , Compatibllity , 
+
+
+1. package-lock.json - it will tell us what version production env is using
+                     - lock the version keep the snapshots
+                     - never keep it in git-ignore XD
+
+        - integrity -> 
+        - resolved  -> 
+
+2. parcel -  npx parcel entry point   -  npx - execute using npm
+
+             npx parcel index.html
+
+ 
+  - HMR - Hot module Reload
+      -File watcher algorithm (written in c++)
+  - Bundler - bundle all the helpful code and give to us
+  - Minification - .parcel-cache/dist
+  - Cleaning our code
+  - Super fast build algorithm
+  - Image optimization - Images are heavy thing to load - parcel take care for that
+  - Caching while development
+  - Compression , Optimization - rename our code 
+  - Compatible to older version of browser
+  - HTTPS on development
+  - PORT NUMBER
+  - Consistent Hashing Algorithm - for caching
+  - ZERO Config
+
+  * .parcel-cache need to add in .git-ignore ( anything which can be generated in server will be push to git-ignore)
+
+packages are minister XD , parcel is Amit shah , react - Narendra Modi
+
+
+
+
+
+Interview QS
+
+Transitive dependency - one package has its own dependency and those package will have their dependency
