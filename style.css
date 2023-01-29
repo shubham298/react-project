@@ -1,3 +1,26 @@
-#container {
-  background-color: red;;
+.title {
+  background-color: #7cc5d9;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  margin: 10px;
+}
+
+#bar {
+  background-color: #f1f1f1;
+  font-size: 15px;
+  padding: 15px 40px 0px 40px;
+}
+
+#logo > img {
+  height:40px
+
+}
+
+#user > img {
+  height:40px
 }
