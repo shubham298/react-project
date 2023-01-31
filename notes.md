@@ -157,3 +157,44 @@ render -> updating something in the DOM
   * Composing component
 
    -> passing component inside component
+
+SESSION 4
+
+
+1. React.Fragment -> use in jsx to hide parent tag because only one Parent tag is madatory in JSX and suppose it is div then jsx used somewhere will have duplicate div
+
+  const JSX = <div><h1>heading1</h1><h2>heading2</h2></div>
+
+  <div>{JSX}</div>
+
+
+  Inscpet element browser we will see div inside div which is extra
+
+  So we will use React.Fragment to hide JSX div
+
+  syntax: 
+
+    <>
+    <div><h1>heading1</h1><h2>heading2</h2></div>
+    </>
+
+2. Config Driven UI
+
+3. Reconciliation algorithm react - It basically use diff algorithm and re-render only that part of tree which is changed.
+
+  defination - The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+  - google it - React Fiber - React 16 - new Reconsilation engine
+
+
+
+Summary 
+
+  1. Planning when creating app
+  2. React.Fragment
+  3. Card build - hardcoded
+  4. card build - one object
+  5. card build - real life data
+  6. config driven UI
+  7. Passing Props
+  8. Reconciliation - Virtual Dom (Representation of DOM) - why key is important for Reconciliation
