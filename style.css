@@ -4,11 +4,11 @@
 
 .flex-container {
   display: flex;
+  border-style: solid;
+  margin-bottom: 20px;
 }
 
-.flex-container > div {
-  margin: 10px;
-}
+
 
 #bar {
   background-color: #f1f1f1;
@@ -17,10 +17,31 @@
 }
 
 #logo > img {
-  height:40px
-
+  height:80px;
 }
 
 #user > img {
-  height:40px
+  height:40px;
+}
+
+.nav-main{
+  border: 1;
+}
+
+.nav-right {
+  margin-left: auto;
+}
+
+.nav-right > ul > li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.card {
+  border-style: solid;
+  width: 200px;
+}
+
+.card > div {
+  padding: 3px;
 }
