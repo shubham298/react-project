@@ -1,9 +1,13 @@
 import RestarauntCard from "./RestarauntCard"
 
-const RestarauntList = () => (
-    <div style={{display:"flex",flexWrap:"wrap"}}>
-      <RestarauntCard></RestarauntCard>
+const RestarauntList = ({mockData}) => (
+  <div >
+    <div className="res-container">
+      {mockData.map(ele => (
+        <RestarauntCard key={ele.info.id} resData={ele.info} />
+      ))}
     </div>
+  </div>
 )
 
 export default RestarauntList

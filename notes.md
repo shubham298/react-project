@@ -198,3 +198,16 @@ Summary
   6. config driven UI
   7. Passing Props
   8. Reconciliation - Virtual Dom (Representation of DOM) - why key is important for Reconciliation
+
+
+
+hooks => nomral js utility functions
+
+two imp hooks  => useState , useEffect
+
+useState => Local state Variable   (gives us superpower variable )
+         => its sync data layer and ui layer (component) i,e whenever state variable changes react will re render the component
+         => DOM Manuplation super fast
+         => scope is within component
+
+Why react is fast ? React is good in DOM Manuplation ^
