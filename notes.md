@@ -211,3 +211,31 @@ useState => Local state Variable   (gives us superpower variable )
          => scope is within component
 
 Why react is fast ? React is good in DOM Manuplation ^
+
+
+Ep:06 : Part 3
+
+* useEffect hook       ->  hook is normal js utility function
+
+UI can fetch data in two ways 
+
+1) UI -> API call (wait for 500ms) -> render
+
+2) UI -> render -> API call -> rerender
+
+
+* In react we should always follow 2nd approch 
+* React has best re rendering mechansim , so we should not take any tension of re-rendering
+* 2nd approch gives Better UX 
+
+* useEffect is called onces page is render
+* useEffect follow 2nd approch
+
+const fetchData = () => {}
+
+useEffect(() => {
+  fetchData()
+}, [])
+
+
+It has 2 arguments , 1 callback func , 2nd dependency array

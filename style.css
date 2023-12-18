@@ -43,11 +43,26 @@
 }
 
 .card {
-  border-style: solid;
+  border: 2px solid white;
   width: 200px;
-  white-space: normal;
+  background-color:#b4b4b4;
+  overflow-wrap: break-word;
+
 }
 
 .card > div {
   padding: 10px;
+}
+
+.shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer{
+  background-color: #b4b4b4;
+  width: 200px;
+  border: 2px solid white;
+  height: 300px;
+  white-space: normal;
 }
