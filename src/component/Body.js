@@ -66,12 +66,9 @@ const Body = () => {
 
       <button
         onClick={() => {
-          filterRestaurant = filterRestaurant.filter(
+          filterRestaurant = initialRestList.filter(
             (ele) => ele.info.avgRating > 4.2
           );
-          {
-            console.log("rate", filterRestaurant);
-          }
           setFilterRestaurant(filterRestaurant || []);
         }}
       >

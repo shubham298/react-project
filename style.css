@@ -45,7 +45,7 @@
 .card {
   border: 2px solid white;
   width: 200px;
-  background-color:#b4b4b4;
+  background-color:#ececec;
   overflow-wrap: break-word;
 
 }
@@ -60,7 +60,7 @@
 }
 
 .shimmer{
-  background-color: #b4b4b4;
+  background-color: #ececec;
   width: 200px;
   border: 2px solid white;
   height: 250px;
