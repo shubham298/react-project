@@ -50,7 +50,13 @@
 
 }
 
-.card > div {
+.menu-card{
+  border: 2px solid white;
+  background-color:#ececec;
+  overflow-wrap: break-word;
+}
+
+.card .menu-card > div {
   padding: 10px;
 }
 

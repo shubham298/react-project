@@ -6,6 +6,7 @@ import Footer from './component/Footer'
 import About from './component/About'
 import Error from './component/Error'
 import Contact from './component/Contact'
+import Menu from './component/Menu'
 
 import {
   createBrowserRouter,
@@ -53,7 +54,12 @@ const router = createBrowserRouter([
     {
       path: "/contact",
       element: <Contact />,
-    },],
+    },
+    {
+      path: "/restaurant/:id",
+      element: <Menu />,
+    },
+  ],
     errorElement: <Error />
   }
 ]);
