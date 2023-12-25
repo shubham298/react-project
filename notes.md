@@ -198,3 +198,58 @@ Summary
   6. config driven UI
   7. Passing Props
   8. Reconciliation - Virtual Dom (Representation of DOM) - why key is important for Reconciliation
+
+
+
+hooks => nomral js utility functions
+
+two imp hooks  => useState , useEffect
+
+1) useState => Local state Variable   (gives us superpower variable )
+        *** => Whenever state variable update , react triggers a reconciliation cycle ( re-render component ) ***
+
+        reconciliation (React Fiber) -> finding difference between two virtual dom ( previous and new ) and then update only that element which is getting changed
+
+          Behind the scene
+          virtual dom is basically object , so algo is finding difference between two objects and it is updating onlt the thing getting changed.
+
+          whenever setFunction is called , it will re-render component
+            example : suppose search button present in body component and button is bind to onchange and its value is bind to localstate
+            During onchange i will update localstate using setStateFunc that time whenver new value is added by user that time whole body component will be re-render but only the input field will get changed since that is dynamically getting changed.
+
+          React knows only input is getting changed so it will only updating input field during re-rendering.
+
+          *** In above suprising part is DOM Manuplation ***
+
+          DOM Manuplation is very expensive but react is handling it so efficently using reconciliation
+
+         => its sync data layer and ui layer (component) i,e whenever state variable changes react will re render the component
+         => DOM Manuplation super fast
+         => scope is within component
+
+======= Why react is fast ? React is good in DOM Manuplation ^
+
+Ep:06 : Part 3
+
+2) useEffect hook       
+
+  ->  hook is normal js utility function
+  *** ->  useEffect is called onces page is render ***
+
+UI can fetch data in two ways 
+
+  1) UI -> API call (wait for 500ms) -> render
+  2) UI -> render -> API call -> rerender
+
+* In react we should always follow 2nd approch 
+* React has best re rendering mechansim , so we should not take any tension of re-rendering
+* 2nd approch gives Better UX 
+* useEffect follow 2nd approch
+
+const fetchData = () => {}
+
+        useEffect(() => {
+            fetchData()
+        }, [])
+. It has 2 arguments , 1 callback func , 2nd dependency array
+

@@ -37,18 +37,43 @@
   margin: 15px;
 }
 
-.card {
-  border-style: solid;
-  width: 100%;
+.res-container{
   display: flex;
   flex-wrap: wrap;
 }
 
-.card-item{
+.card {
+  border: 2px solid white;
   width: 200px;
+  background-color:#ececec;
+  overflow-wrap: break-word;
+
+}
+
+.menu-card{
+  border: 2px solid white;
+  background-color:#ececec;
+  overflow-wrap: break-word;
+}
+
+.card .menu-card > div {
+  padding: 10px;
+}
+
+.shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer{
+  background-color: #ececec;
+  width: 200px;
+  border: 2px solid white;
+  height: 250px;
   white-space: normal;
 }
 
-.card > div {
-  padding: 3px;
+.logout-but{
+  padding: 20px ;
+  margin-right: 10px;
 }
