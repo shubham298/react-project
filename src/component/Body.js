@@ -14,8 +14,9 @@ const Body = () => {
     } catch (error) {
       console.log("error", error);
     }
-  }, []);
-
+  }, []); // no array -> it will executes mutiple time (infinty)
+          // empty array -> it will execute only once after render 
+          // state array -> it will execute only state is updated
   const fetchData = async () => {
     let response = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2762702&lng=72.8929&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
