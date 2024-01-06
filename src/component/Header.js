@@ -12,7 +12,7 @@ const Header = () => {
     return (
     <div className="flex-container">
         <div id="logo" key="logo">
-            <img src={headerImg} ></img>
+           <Link to="/"><img src={headerImg} width="100"></img></Link> 
         </div>
         <div id="user" key="navItem" className='nav-right'>
             <ul>

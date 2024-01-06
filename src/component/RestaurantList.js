@@ -1,6 +1,6 @@
 import { CDN_URL } from '../utils/constant'
 import { Link } from 'react-router-dom'
-const RestarauntList = ({mockData}) => (
+const RestaurantList = ({mockData}) => (
   <div >
     <div className="res-container">
       {mockData?.map(ele => (
@@ -16,4 +16,4 @@ const RestarauntList = ({mockData}) => (
   </div>
 )
 
-export default RestarauntList
+export default RestaurantList
