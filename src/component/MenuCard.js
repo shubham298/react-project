@@ -1,7 +1,7 @@
 
-import { CDN_URL } from "./constant";
+import { CDN_URL } from "../utils/constant";
 
-const useMenuCard = (resInfo) => {
+const MenuCard = (resInfo) => {
     const data = resInfo?.map((card) => {
         return (
           <div key={card.card.info.id} className="menu-card">
@@ -31,4 +31,4 @@ const useMenuCard = (resInfo) => {
       return data
 }
 
-export default useMenuCard
+export default MenuCard
