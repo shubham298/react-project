@@ -3,16 +3,19 @@ const ReactDOM = require('react-dom/client')
 import Header from './component/Header'
 import Body from './component/Body'
 import Footer from './component/Footer'
-import About from './component/About'
+import { lazy, Suspense } from 'react'
 import Error from './component/Error'
 import Contact from './component/Contact'
 import Menu from './component/Menu'
+
+const About = lazy(() => import("./component/About"))
 
 import {
   createBrowserRouter,
   RouterProvider,
   Outlet
 } from "react-router-dom";
+
 
  /*
  Header
@@ -49,14 +52,14 @@ const router = createBrowserRouter([
       }, 
     ,{
       path: "/about",
-      element: <About />,
+      element: <Suspense fallback={<h1>Loading</h1>}> <About /></Suspense> ,
     },
     {
       path: "/contact",
       element: <Contact />,
     },
     {
-      path: "/restaurant/:id",
+      path: "/restaurant/:id/:name",
       element: <Menu />,
     },
   ],

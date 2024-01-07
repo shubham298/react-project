@@ -4,11 +4,12 @@ import { useState, useEffect } from "react"
 import {
     Link,
   } from "react-router-dom";
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 const Header = () => {
 
     let [logoutName, setLogoutName] = useState('Login')
-
+    let onlineStatus = useOnlineStatus();
     return (
     <div className="flex-container">
         <div id="logo" key="logo">
@@ -16,6 +17,7 @@ const Header = () => {
         </div>
         <div id="user" key="navItem" className='nav-right'>
             <ul>
+            <li> OnlineStatus : {onlineStatus === false ? "🔴" : "✅"} </li>
                 <li> <Link to="/about">About us</Link> </li>
                 <li> <Link to="/contact">Contact</Link>  </li>
                 <li>Cart</li>

@@ -51,6 +51,7 @@
 }
 
 .menu-card{
+  width: 400px;
   border: 2px solid white;
   background-color:#ececec;
   overflow-wrap: break-word;
@@ -81,4 +82,9 @@
 .user-card{
   padding: 10px;
   border: 1px solid black;
+}
+
+.menu-container{
+  display: flex;
+  flex-wrap: wrap;
 }

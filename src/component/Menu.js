@@ -1,21 +1,24 @@
 import { useParams } from "react-router";
 import Shimmer from "./Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
-// import useMenuCard from "../utils/useMenuCard";
 
 import MenuCard from "./MenuCard";
 
 const Menu = () => {
-  const { id } = useParams();
-  const resInfo = useRestaurantMenu(id); // custom hook (custom utility function)
-  //const menuCard = useMenuCard(resInfo); // custom hook (custom utility function)
+  const { id , name} = useParams();
+  const resInfo = useRestaurantMenu(id);
   if (!resInfo?.length) {
-    return <Shimmer />;
+    return (<Shimmer></Shimmer>);
   }
   return (
     <>
-      <h1>Menu Page </h1>
-      <MenuCard resInfo={resInfo}/>
+      <h1> {"Menu : " + name} </h1>
+      <div className="menu-container">
+      {resInfo.map((ele) => {
+        return <MenuCard card={ele} key={ele.card.info.id} />;
+      })}
+      </div>
+    
     </>
   );
 };

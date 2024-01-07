@@ -472,3 +472,36 @@ https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 
 Episode 9 : Write code in better and clean way , Custom Hook
+
+Ep9 - part 1 - 4 : Custom Hook (also refer hardcopy notes)
+
+  .start with name : "use"
+  .it is custom (utility function) add it in utils folder
+
+  How to start writing custom hook  ?
+    
+    first decide : contract of the function : what will be the input and output ?
+
+
+  Part 5: Lazy loading
+  
+    Very important concept for large scale application
+    
+    Also called as :-
+
+    Lazy loading
+    Dynamic bundling
+    chunking
+    on demand loading
+    dynamic import
+
+  Usage: 
+
+  lazy  -> import from react library
+
+  1) import component using lazy function
+
+      const About = lazy(() => import("./component/About"));
+
+  2) Wrap lazy component with <Suspense >
+
