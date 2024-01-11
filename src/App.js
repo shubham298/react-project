@@ -2,11 +2,12 @@ const React = require('react')
 const ReactDOM = require('react-dom/client')
 import Header from './component/Header'
 import Body from './component/Body'
-import Footer from './component/Footer'
+//import Footer from './component/Footer'
 import { lazy, Suspense } from 'react'
 import Error from './component/Error'
 import Contact from './component/Contact'
 import Menu from './component/Menu'
+import Form from './component/Form'
 
 const About = lazy(() => import("./component/About"))
 
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
     {
       path: "/restaurant/:id/:name",
       element: <Menu />,
+    },
+    {
+      path: "/form",
+      element: <Form />,
     },
   ],
     errorElement: <Error />

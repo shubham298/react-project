@@ -20,6 +20,7 @@ const Header = () => {
             <li> OnlineStatus : {onlineStatus === false ? "🔴" : "✅"} </li>
                 <li> <Link to="/about">About us</Link> </li>
                 <li> <Link to="/contact">Contact</Link>  </li>
+                <li> <Link to="/form">Form</Link>  </li>
                 <li>Cart</li>
                 <button className='logout-but' onClick={() => {
                     logoutName === "Login"
